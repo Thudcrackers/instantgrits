@@ -15,12 +15,69 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+html {
+  height: 100%;
+}
+
+#image-preview {
+  margin: 0px auto;
+}
+
+#post_image {
+  padding: 1em;
+  margin: 0px auto;
+}
+
+.registration-bg {
+  padding-top: 4em;
+  height: 100%;
+  background-image: url('https://images.unsplash.com/photo-1542332213-31f87348057f?ixlib=rb-0.3.5&s=3c4ffb1518018f2ca33dde4fcd592cc4&auto=format&fit=crop&w=1950&q=80');
+  -moz-background-size: cover;
+  -webkit-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.login-bg {
+  padding-top: 4em;
+  height: 100%;
+  background-image: url('https://images.unsplash.com/photo-1503970999490-4404449dc349?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=7e027cf07fe6c63cf98abc0e09ee95bd&auto=format&fit=crop&w=1938&q=80');
+  -moz-background-size: cover;
+  -webkit-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.log-in{
+  margin-left: auto;
+  margin-right: auto;
+  text-align:center;
+  border: none;
+}
+
+.panel {
+  border-radius: 8px;
+}
+
+.panel-heading{
+  h1 {
+    text-align: center;
+  }
+}
+
 body {
   background-color: #fafafa;
   font-family: proxima-nova, 'Helvetica Neue', Arial, Helvetica, sans-serif;
 }
 
+.alert {
+  margin-bottom: 0px;
+}
+
 /* ## NAVBAR CUSTOMISATIONS ## */
+.navbar {
+  margin-bottom: 0px;
+}
 
 .navbar-brand {
   a {

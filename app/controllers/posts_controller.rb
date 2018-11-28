@@ -41,6 +41,7 @@ end
 def destroy
     if @post.destroy
         flash[:success] = "Post deleted."
+        redirect_to root_path
     else
         flash[:alert] = "Something happened."
         redirect_to root_path
