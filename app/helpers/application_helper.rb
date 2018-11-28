@@ -5,4 +5,11 @@ module ApplicationHelper
           alert: 'alert-warning',
           notice: 'alert-info' }[flash_type.to_sym] || flash_type.to_s
     end
+
+    def form_image_select(post)
+        return image_tag post.image.url(:medium), id: 'image-preview', class: 'img-responsive'
+        if post.image.exists?
+            image_tag 'https://via.placeholder.com/450', id: 'image-preview', class: 'img-responsive'
+        end
+    end
 end
