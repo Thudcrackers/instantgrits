@@ -7,9 +7,12 @@ module ApplicationHelper
     end
 
     def form_image_select(post)
-        return image_tag post.image.url(:medium), id: 'image-preview', class: 'img-responsive'
-        if post.image.exists?
-            image_tag 'https://via.placeholder.com/450', id: 'image-preview', class: 'img-responsive'
-        end
+        return image_tag post.image.url(:medium), id: 'image-preview', class: 'img-responsive' if post.image.exists?
+        image_tag 'https://via.placeholder.com/450', id: 'image-preview', class: 'img-responsive'
+    end
+
+    def profile_avatar_select(user)
+        return image_tag user.avatar.url(:medium), id: 'image-preview', class: 'img-responsive' if user.avatar.exists?
+        image_tag 'https://via.placeholder.com/152', id: 'image-preview', class: 'img-responsive img-circle profile-image'
     end
 end
