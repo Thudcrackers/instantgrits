@@ -17,3 +17,4 @@
                                 =f.text_area :bio, label: false, rows: 4
                     .form-group.text-center
                         =f.submit "Update Profile", class: "btn btn-success"
+                        =link_to "Cancel", profile_path(current_user.user_name), class: 'btn btn-danger'

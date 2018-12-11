@@ -12,7 +12,15 @@ class ProfilesController < ApplicationController
   end
   
   def update
-
+    
+    if @user.update(profile_params)
+      flash[:success] = 'Your profile has been updated.'
+      redirect_to profile_path
+    else
+      @user.errors.full_messages
+      flash[:error] = @user.errors.full_messages
+      render :edit
+    end
   end
 
   private
@@ -25,5 +33,9 @@ class ProfilesController < ApplicationController
       flash[:error] = "That profile doesn't belong to you!"
       redirect_to profile_path
     end
+  end
+
+  def profile_params
+    params.require(:user).permit(:avatar, :bio)
   end
 end
